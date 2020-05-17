@@ -1,5 +1,7 @@
 <p align="center">
+<a href="https://dscvit.com">
 	<img src="https://user-images.githubusercontent.com/30529572/72455010-fb38d400-37e7-11ea-9c1e-8cdeb5f5906e.png" />
+</a>
 	<h2 align="center"> < Insert Project Title Here > </h2>
 	<h4 align="center"> < Insert Project Description Here > <h4>
 </p>
@@ -35,19 +37,13 @@
 < insert code >
 ```
 
-<br>
-
 ## Contributors
-
-* [ < INSERT NAME HERE > ](INSERT_PROFILE_URL_HERE)
-* [ < INSERT NAME HERE > ](INSERT_PROFILE_URL_HERE)
-
-
+<a href="https://github.com/GDGVIT/template/blob/master/Contributors.md">Add Yourself</a>
 
 <br>
 <br>
 
 <p align="center">
-	Made with :heart: by DSC VIT
+	Made with :heart: by <a href="https://dscvit.com">DSC VIT</a>
 </p>
 
