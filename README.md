@@ -38,7 +38,7 @@
 ```
 
 ## Contributors
-<a href="https://github.com/GDGVIT/template/blob/master/Contributors.md">Add Yourself</a>
+<a href="https://github.com/GDGVIT/template/blob/master/Contributors.md">See all contributors to this project.</a>
 
 <br>
 <br>
