@@ -1,5 +1,7 @@
+- name: Run tests
+  # ... your test step here
 
-## The following job will send build succes status to the slack bot 
+#The following job will send build succes status to the slack bot 
 - name: Notify slack success
   if: success()
   env:
@@ -10,7 +12,7 @@
     status: SUCCESS
     color: good
 
-## The following job will send build fail status to the slack bot 
+#The following job will send build fail status to the slack bot 
 - name: Notify slack fail
   if: failure()
   env:
