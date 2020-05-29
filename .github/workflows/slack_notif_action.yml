@@ -41,7 +41,7 @@ jobs:
         uses: voxmedia/github-action-slack-notify-build@v1
         with:
           # Updates existing message from the first step
-          message_id: ${{ jobs.start.steps.slack.outputs.message_id }}
+          message_id: ${{ needs.start.steps.slack.outputs.message_id }}
           channel: build-notifs
           status: SUCCESS
           color: good
@@ -53,7 +53,7 @@ jobs:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
         uses: voxmedia/github-action-slack-notify-build@v1
         with:
-          message_id: ${{ jobs.start.steps.slack.outputs.message_id  }}
+          message_id: ${{ needs.start.steps.slack.outputs.message_id  }}
           channel: build-notifs
           status: FAILED
           color: danger
