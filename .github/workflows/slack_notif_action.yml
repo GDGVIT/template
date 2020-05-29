@@ -39,9 +39,7 @@ jobs:
     if: always()
     steps:
       - uses: technote-space/workflow-conclusion-action@v1
-      - name: message id
-        run: |
-            echo ${{ needs.start.outputs.output1  }}
+
       # Will send notification when the build will get succeeded
       - name: Check for success
         if: env.WORKFLOW_CONCLUSION != 'failure'
@@ -62,7 +60,7 @@ jobs:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
         uses: voxmedia/github-action-slack-notify-build@v1
         with:
-          message_id: ${{ needs.start.outputs.output1  }}
+          message_id: ${{ needs.start.outputs.output1 }}
           channel: build-notifs
           status: FAILED
           color: danger
