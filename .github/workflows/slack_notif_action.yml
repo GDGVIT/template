@@ -1,7 +1,25 @@
-uses: voxmedia/github-action-slack-notify-build@v1
-with:
-  channel: build-notifs
-  status: STARTED
-  color: good
-env:
-  SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+- name: Notify slack success
+  if: success()
+  id: slack 
+  env:
+    SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+  uses: voxmedia/github-action-slack-notify-build@v1
+  with:
+    channel: build-notifs
+    status: STARTING
+    color: warning
+
+- name: Run tests
+
+
+- name: Notify slack success
+  if: success()
+  env:
+    SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+  uses: voxmedia/github-action-slack-notify-build@v1
+  with:
+    # Updates existing message from the first step
+    message_id: ${{ steps.slack.outputs.message_id }}
+    channel: build notifs
+    status: SUCCESS
+    color: good
