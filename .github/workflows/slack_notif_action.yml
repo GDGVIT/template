@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-      
+
 jobs:
   job1:
     name: Send Notifs to slack
@@ -16,7 +16,7 @@ jobs:
         id: slack 
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-        uses: voxmedia/github-action-slack-notify-build@v1
+        uses: voxmedia/github-action-slack-notify-build@v1.1.1
         with:
           channel: build-notifs
           status: STARTING
