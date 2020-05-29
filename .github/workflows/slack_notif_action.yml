@@ -1,18 +1,14 @@
-name: Notify slack success
-on:
-  push:
-    branches:
-      - master
+# You can remove this action file if you dont want to add github actions to your repo
 
+name: Test_Action_Name ## Replace it with your own action name
+on: push
 jobs:
-  job1:
-    name: Send Notifs to slack
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
+  start:
+    name: Send build started notif to slack
     steps:
-      - name: Start Action
-        if: success()
+      # Will send notification when the build will start
+      - name: send build notif
+        if: always()
         id: slack 
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
@@ -21,19 +17,42 @@ jobs:
           channel: build-notifs
           status: STARTING
           color: warning
-
-      - name: Run tests
+  job1:
+    name: Job 1 here ## Add your jobs steps here
+    runs-on: ubuntu-latest 
+    steps:
+      - name: define job steps
         run: |
-          echo Hello world!
+          echo Job1 done
 
-      - name: Notify slack update
-        if: success()
+  # Will send notification when the build will get succeeded
+  status:
+    name: Notify build status
+    runs-on: ubuntu-latest
+    needs: start
+    if: always()
+    steps:
+      # Will send notification when the build will get succeeded
+      - name: Check for success
+        if: env.WORKFLOW_CONCLUSION == 'success'
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
         uses: voxmedia/github-action-slack-notify-build@v1
         with:
           # Updates existing message from the first step
-          message_id: ${{ steps.slack.outputs.message_id }}
+          message_id: ${{ jobs.start.steps.slack.outputs.message_id }}
           channel: build-notifs
           status: SUCCESS
           color: good
+      
+      # Will send notification when the build will get failed
+      - name: Check for fail
+      if: env.WORKFLOW_CONCLUSION !='success'
+      env:
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+      uses: voxmedia/github-action-slack-notify-build@v1
+      with:
+        message_id: ${{ jobs.start.steps.slack.outputs.message_id  }}
+        channel: build-notifs
+        status: FAILED
+        color: danger
