@@ -5,6 +5,7 @@ on: push
 jobs:
   start:
     name: Send build started notif to slack
+    runs-on: ubuntu-latest
     steps:
       # Will send notification when the build will start
       - name: send build notif
@@ -47,7 +48,7 @@ jobs:
       
       # Will send notification when the build will get failed
       - name: Check for fail
-        if: env.WORKFLOW_CONCLUSION =='failure'
+        if: env.WORKFLOW_CONCLUSION !='success'
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
         uses: voxmedia/github-action-slack-notify-build@v1
