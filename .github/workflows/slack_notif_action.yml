@@ -34,6 +34,6 @@ jobs:
         with:
           # Updates existing message from the first step
           message_id: ${{ steps.slack.outputs.message_id }}
-          channel: build notifs
+          channel: build-notifs
           status: SUCCESS
           color: good
