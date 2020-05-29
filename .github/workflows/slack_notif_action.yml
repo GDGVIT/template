@@ -16,24 +16,24 @@ jobs:
         id: slack 
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-        uses: voxmedia/github-action-slack-notify-build@v1.1.1
+        uses: voxmedia/github-action-slack-notify-build@v1
         with:
           channel: build-notifs
           status: STARTING
           color: warning
 
-      - name: Run tests
-        run: |
-          echo Hello world!
+      # - name: Run tests
+      #   run: |
+      #     echo Hello world!
 
-      - name: Notify slack update
-        if: success()
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-        uses: voxmedia/github-action-slack-notify-build@v1
-        with:
-          # Updates existing message from the first step
-          message_id: ${{ steps.slack.outputs.message_id }}
-          channel: build-notifs
-          status: SUCCESS
-          color: good
+      # - name: Notify slack update
+      #   if: success()
+      #   env:
+      #     SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+      #   uses: voxmedia/github-action-slack-notify-build@v1
+      #   with:
+      #     # Updates existing message from the first step
+      #     message_id: ${{ steps.slack.outputs.message_id }}
+      #     channel: build-notifs
+      #     status: SUCCESS
+      #     color: good
