@@ -7,7 +7,7 @@ jobs:
     name: Send build started notif to slack
     runs-on: ubuntu-latest
     outputs:
-      message_id: steps.slack.outputs.message_id
+      output1: steps.slack.outputs.message_id
     steps:
       # Will send notification when the build will start
       - id: slack 
@@ -19,6 +19,8 @@ jobs:
           channel: build-notifs
           status: STARTING
           color: warning
+        run: |
+          echo env.message_id
   job1:
     name: Job 1 here ## Add your jobs steps here
     runs-on: ubuntu-latest 
@@ -37,7 +39,9 @@ jobs:
     if: always()
     steps:
       - uses: technote-space/workflow-conclusion-action@v1
-
+      - name: message id
+        run: |
+            echo ${{ needs.start.outputs.output1  }}
       # Will send notification when the build will get succeeded
       - name: Check for success
         if: env.WORKFLOW_CONCLUSION != 'failure'
@@ -46,7 +50,7 @@ jobs:
         uses: voxmedia/github-action-slack-notify-build@v1
         with:
           # Updates existing message from the first step
-          message_id: ${{ needs.start.outputs.message_id }}
+          message_id: ${{ needs.start.outputs.output1 }}
           channel: build-notifs
           status: SUCCESS
           color: good
@@ -58,7 +62,7 @@ jobs:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
         uses: voxmedia/github-action-slack-notify-build@v1
         with:
-          message_id: ${{ needs.start.outputs.message_id  }}
+          message_id: ${{ needs.start.outputs.output1  }}
           channel: build-notifs
           status: FAILED
           color: danger
