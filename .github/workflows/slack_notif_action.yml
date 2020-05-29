@@ -1,4 +1,4 @@
-- name: Notify slack success
+- name: "Notify slack success"
   if: success()
   id: slack 
   env:
@@ -12,7 +12,7 @@
 - name: Run tests
 
 
-- name: Notify slack success
+- name: "Notify slack success"
   if: success()
   env:
     SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
