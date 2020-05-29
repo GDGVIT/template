@@ -24,7 +24,7 @@ jobs:
 
       - name: Run tests
         run: |
-          echo Hello world
+          echo Hello world!
 
       - name: Notify slack update
         if: success()
