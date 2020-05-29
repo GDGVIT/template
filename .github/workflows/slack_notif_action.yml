@@ -19,8 +19,7 @@ jobs:
           channel: build-notifs
           status: STARTING
           color: warning
-        run: |
-          echo env.message_id
+      
   job1:
     name: Job 1 here ## Add your jobs steps here
     runs-on: ubuntu-latest 
