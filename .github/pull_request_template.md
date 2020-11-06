@@ -19,11 +19,7 @@ Please check the type of change your PR introduces:
 - [ ] No
 - [ ] Maybe
 
-# Does this introduce a breaking change?
-- [ ] Yes
-- [ ] No
-
-#### Issue Number: paste the issue link here if any or else remove this line
+#### Issue Reference: paste the issue link here if any or else remove this line
 
 # Other information
 
