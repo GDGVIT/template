@@ -28,6 +28,8 @@ Examples of unacceptable behavior by participants include:
 * Publishing others' private information, such as a physical or electronic
  address, without explicit permission
 * Sharing critical Pentest findings with public or putting in an issue
+* DOS Attack on any of our subdomain (subdomain.dscvit.com)
+* Continous load testing is strictly not allowed
 * Other conduct which could reasonably be considered inappropriate in a
  professional setting
 
