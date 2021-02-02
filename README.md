@@ -14,27 +14,28 @@
   [![UI ](https://img.shields.io/badge/User%20Interface-Link%20to%20UI-orange?style=flat-square&logo=appveyor)](INSERT_UI_LINK_HERE)
 
 
-## Functionalities
-- [ ]  < insert functionality >
-- [ ]  < insert functionality >
-- [ ]  < insert functionality >
-- [ ]  < insert functionality >
+## Features
+- [ ]  < feature >
+- [ ]  < feature >
+- [ ]  < feature >
+- [ ]  < feature >
 
 <br>
 
+## Dependencies
+ - < dependency >
+ - < dependency >
 
-## Instructions to run
 
-* Pre-requisites:
-	-  < insert pre-requisite >
-	-  < insert pre-requisite >
+## Running
 
-* < directions to install > 
+
+< directions to install > 
 ```bash
 < insert code >
 ```
 
-* < directions to execute >
+< directions to execute >
 
 ```bash
 < insert code >
