@@ -6,7 +6,7 @@ Please note that this project is released with a [Contributor Code of Conduct](C
 
 - Decide which repository to contribute
 - Decide what to contribute
-- Fork the repo then clone it locally
+- Fork the repository then clone it locally
 - Commit your work (You should create a new branch when you're doing development work that is somewhat experimental in nature. )
 - Watch how to make a [Pull Request](https://www.youtube.com/watch?v=RVf9nXslJIc)
 - Congrats 🎉 you have just contributed towards open source!
@@ -20,15 +20,18 @@ Please note that this project is released with a [Contributor Code of Conduct](C
 - Review code on other people’s submissions and help improving / finding vulnerabilities
 
 ## Making a PR
+
 - Provide all the appropriate details asked in PR template
 - A pull request doesn’t have to represent finished work. It’s usually better to open a pull request early on, so others can watch or give feedback on your progress. Just mark it as a “WIP” (Work in Progress) in the subject line. You can always add more commits later.
 
 ## Opening an Issue
+
 - Make use of an appropriate Issue Template
 - We welcome Feature request, Bug Report, Documentation fix and others
 - Do not open critical secuirty issues here, report them directly at [discord](https://discord.com/invite/cWyEXgV) to an inner-core member only
 
 ## Communicating effectively
+
 **Give context.** Help others get quickly up to speed. If you’re running into an error, explain what you’re trying to do and how to reproduce it. If you’re suggesting a new idea, explain why you think it’d be useful to the project (not just to you!).
 
 ```
@@ -65,8 +68,10 @@ Please note that this project is released with a [Contributor Code of Conduct](C
 ```
 
 ## Misc
-- You are welcome to Propose a new feature or other project idea at our [ideas website](ideas.dscvit.com/)
+
+- You are welcome to Propose a new feature or other project idea at our [ideas site](ideas.dscvit.com/)
 - You may Discuss a high-level topic or idea (for example, community, vision or policies) at our [Discord](https://discord.com/invite/cWyEXgV) Server
 
 ## Attribution
+
 - [Open Source Guide](https://opensource.guide/how-to-contribute/)
