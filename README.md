@@ -1,9 +1,8 @@
 <p align="center">
 <a href="https://dscvit.com">
-	<img src="https://user-images.githubusercontent.com/30529572/92081025-fabe6f00-edb1-11ea-9169-4a8a61a5dd45.png" alt="DSC VIT"/>
+	<img width="400" src="https://user-images.githubusercontent.com/56252312/159312411-58410727-3933-4224-b43e-4e9b627838a3.png#gh-light-mode-only" alt="GDSC VIT"/>
+	<img width="400" src="https://user-images.githubusercontent.com/56252312/159315690-50835066-f91b-42e7-b726-4d0d949004a5.png#gh-dark-mode-only" alt="GDSC VIT"/>
 </a>
-	<h2 align="center"> < Insert Project Title Here > </h2>
-	<h4 align="center"> < Insert Project Description Here > <h4>
 </p>
 
 ---
