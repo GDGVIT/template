@@ -1,6 +1,6 @@
 #!/bin/sh
 commit_message=$(cat "$1" | sed -e 's/^[[:space:]]*//')
-matched_str=$(echo "$commit_message" | grep -E "^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\([a-z]+\))?: [a-zA-Z0-9 ]+$")
+matched_str=$(echo "$commit_message" | grep -E "^Merge.+|(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert|types)(\(.+\))?!?: [a-zA-Z0-9 ]+$")
 echo "$matched_str"
 if [ "$matched_str" != "" ];
 then
