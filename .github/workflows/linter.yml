@@ -56,6 +56,7 @@ jobs:
           VALIDATE_DOCKERFILE: false
           VALIDATE_DOCKERFILE_HADOLINT: false
           VALIDATE_PYTHON_FLAKE8: false
+          PYTHON_ISORT_CONFIG_FILE: .isort.cfg
           VALIDATE_BASH: false
           VALIDATE_JSCPD: false
           VALIDATE_RUST_2015: false
