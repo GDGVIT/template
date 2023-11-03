@@ -54,6 +54,13 @@ jobs:
       - name: Lint Code Base
         uses: super-linter/super-linter@v5
         env:
-          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_ALL_CODEBASE: true
+          VALIDATE_MARKDOWN: false
+          VALIDATE_DOCKERFILE: true
+          VALIDATE_DOCKERFILE_HADOLINT: false
+          VALIDATE_PYTHON_FLAKE8: false
+          VALIDATE_BASH: false
+          VALIDATE_JSCPD: false
+          VALIDATE_RUST_2015: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
